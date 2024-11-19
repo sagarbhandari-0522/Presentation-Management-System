@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Internship_Project.Models.Course>
+<h2>Courses</h2>
+<form action="@Url.Action("Create", "Course")" method="get">
+    <button type="submit" class="btn btn-primary"> New Courses</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Course Name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var course in Model)
+        {
+            <tr>
+                <td>@course.Name</td>
+                <td>@course.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>
